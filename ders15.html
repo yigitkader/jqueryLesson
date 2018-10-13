@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<style type="text/css">
+		body{margin: auto; font-size: 12px Arial;}
+		ul,li{margin: 0; padding: 0; list-style-type: none;}
+		ul#liste{padding: 20px; }
+		ul#liste li{ background-color: #eee; padding: 5px; border-bottom: 1px solid #ddd; }
+		#sayfalama{padding: 0 20px 20px 20px;}
+		#sayfalama a{color: #fff; background-color:#333; padding: 3px 7px; margin-right: 6px; text-decoration: none;}
+		#sayfalama a.aktif{background-color: red; }
+	
+	</style>
+	
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+		
+		Sayfalama Yapısı Oluşturma
+	
+	 */
+
+	$(function(){
+
+		var toplamLi=$("ul#liste li").length;
+
+		var sayfaVeriSayisi=2;
+
+		$("ul#liste li:gt("+(sayfaVeriSayisi-1)+")").hide();
+
+		var linkSayisi=Math.round(toplamLi/sayfaVeriSayisi);
+
+		for(var i=0; i<linkSayisi; i++)
+		{
+			$("#sayfalama").append('<a href="javascript:void(0)">'+(i+1)+'</a>');
+		}
+
+		$("#sayfalama a:first").addClass("aktif");
+
+		$("#sayfalama a").click(function(){
+			var indis=$(this).index()+1;
+
+			 var gt=sayfaVeriSayisi*indis;
+			 $("#sayfalama a").removeClass("aktif");
+			 $(this).addClass("aktif");
+
+			 $("ul#liste li").hide();
+
+			 for(var j=gt-sayfaVeriSayisi; j<gt; j++)
+			 {
+			 	$("ul#liste li:eq("+j+")").show();
+			 }
+
+		});
+
+
+	});
+
+
+	</script>
+		
+
+</head>
+<body>
+	<ul id="liste">
+		<li>1.Li</li>
+		<li>2.Li</li>
+		<li>3.Li</li>
+		<li>4.Li</li>
+		<li>5.Li</li>
+		<li>6.Li</li>
+		<li>7.Li</li>
+		<li>8.Li</li>
+		<li>9.Li</li>
+		<li>10.Li</li>
+		<li>11.Li</li>
+		<li>12.Li</li>
+		<li>13.Li</li>
+	</ul>
+	<div id="sayfalama"></div>
+
+
+</body>
+</html>

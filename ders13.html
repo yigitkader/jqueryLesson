@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	1)JQuery Next Metodu  
+		-Secilen nesneden sonraki gelen nesneyi secmemizi sağlar
+	
+	2)JQuery focusOut Metodu
+		-JQuery focusOut Metodu --> Odaklanmadan cıktıgında demektir.
+	
+	3)JQuery dblClick Metodu 
+		-2 kez tıklanınca işlem yapan olay.
+	*/
+	$(function(){
+
+		// $("input[name=inp]").click(function(){
+		// 	$(this).next().hide();
+		// });
+		
+		// $("input[name=focusOut]").focus(function(){
+		// 	if ($(this).val()=='arama yap') 
+		// 	{
+		// 		$(this).val("");
+		// 	}
+
+		// }).focusout(function(){
+		// 	if ($(this).val()=="") 
+		// 	{
+		// 		$(this).val("arama yap");
+		// 	}
+		// });
+
+		$(".yigit").dblclick(function(){
+
+			alert("2 kere tıkladınız");
+		});
+
+
+		
+	});
+
+
+	</script>
+
+</head>
+<body>
+
+	
+
+	<div class="kader">Deneme divi</div> <br><hr><br>
+	
+	<input type="text" value="arama yap"  name="focusOut">
+	
+	<br><hr><br>
+	
+	<div class="yigit">DblClick div</div>
+
+	
+
+</body>
+</html>

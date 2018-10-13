@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	1) JQuery Html()-Text()-Val()  Metodları 
+		 
+		 -Html , text elemanları form elemanları haric tüm elemanlardan veri almamızı sağlar
+		 -text html kodlarını almaz, html ise html kodları ile birlikte alır
+		 -val metodu da sadece form elamanlarını almamızı sağlar.
+	
+	
+	2) Jquery toggleClass() Metodları
+		-Toogle mantıgı-- Yani tıklayınca class değiştriyor bidaha tıklayınca eski class'a dönüyor 
+	
+	3) Jquery Prepend Metodu 
+		-Append metodunun tam tersidir. Yani basa ekleme yapar
+	*/
+
+	
+	$(function()
+	{
+		// var deger=$("div#kader").text();
+		// $("div#kader2").text(deger);
+		
+		
+		//  $("button").click(function(){
+		// 	 var deger2=$("input[name=input1]").val();
+		//  	alert(deger2); 
+		//  	$("input[name=input1]").val("").focus();
+
+
+		// $("div#tg").click(function(){
+			
+		// 	$(this).addClass("toggle");
+			
+		//  });
+
+		
+
+		// $("div#dvv").click(function(){
+		// 	$(this).prepend('<div>yeni div</div>');
+		// })
+ 
+	});
+
+
+	</script>
+	
+	<style type="text/css">
+		div.stil{border: 5px solid #aaa; padding: 10px; }
+		
+		div.toggle{border: 5px solid #aaa; padding: 10px; background-color:blue;}
+		div.toggle2{border: 5px solid #aaa; padding: 10px; background-color:yellow;}
+
+		
+	</style>
+
+</head>
+<body>
+
+
+	
+	<div id="kader" class="stil"><b>Div</b> alanı</div> <br><br>
+	
+	<div id="kader2" class="stil">Div</div> <br> <br>
+	
+
+	<input type="text" name="input1"/>
+
+	<button class="buton">işlem yap</button>
+	<br> <br>
+
+	<!-- Toogle divleri -->
+	<div id="tg" class="">Toggle Div( Tıklaa )</div> <br><br>
+
+	<!-- Prepend alanı -->
+
+	<div id="dvv"> Div</div>
+	
+
+
+</body>
+</html>

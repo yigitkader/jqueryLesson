@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+		
+		-- TAB UYGULAMASI --
+	
+	 */
+	$(function()
+	{
+
+		$("ul#tab li:first").addClass("aktif");
+		$(".tabIcerik:not(:first)").hide();
+
+		$("ul#tab li").click(function(){
+			var deger=$(this).index();
+			$("ul#tab li").removeClass("aktif");
+			$("ul#tab li:eq("+deger+")").addClass("aktif");
+
+			$(".tabIcerik").slideUp(3000);
+			$(".tabIcerik").eq(deger).slideDown(5000);
+
+		});
+
+
+
+	});
+
+
+	</script>
+
+
+	<style type="text/css">
+		body{font: 12px Arial;}
+		ul , li{ padding: 0; margin:0 ; list-style: none; }
+		a{text-decoration: none;}
+		.clear{clear: both;}
+		
+		/* Tab */
+		
+
+		
+		ul#tab{margin-bottom: 10px; overflow: auto;}
+		
+		ul#tab li{float: left; margin-right: 5px; }
+		
+		ul#tab li a{background-color: #fff; display: block; border: 1px solid #bbb; padding: 4px 10px; color: #333; }
+		
+		ul#tab li.aktif a{background-color: #333; color:#fff; border-color: #000; } 
+		
+		div.tabIcerik{border: 2px solid #ddd; padding: 10px; color:#aaa;}
+
+
+	</style>
+
+</head>
+<body>
+
+<ul id="tab">
+	<li><a href="#">1.Tab</a></li>
+	<li><a href="#">2.Tab</a></li>
+	<li><a href="#">3.Tab</a></li>
+</ul>
+
+<!-- <div class="clear"></div> -->
+
+<div class="tabIcerik">Burası 1. tab iceriğidir</div>
+<div class="tabIcerik">Burası 2. tab iceriğidir</div>
+<div class="tabIcerik">Burası 3. tab iceriğidir</div>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+
+	1)JQuery is() metodu  ->> Buna biz kontrol metodu diyebiliriz. icine yazdıgımız nesnenin olup olmadıgına bakar.
+
+		-return true/false
+	
+	2)Jquery replaceWith() metodu --> Nesnelerin etiketlerini değiştirmek icin kullanabiliriz.
+
+	3)Jquery blur() metodu --> Nesneden odaklanma cekildiğinde calısır.
+
+	*/
+
+	$(function(){
+
+		// var sonuc=$("*").is("img");
+		// if (sonuc) 
+		// {
+		// 	$("body").html("İmg bulunuyor");
+		// }
+		// else
+		// {
+		// 	$("body").html("İmg bulunamadı");	
+		// }
+
+		// $("a.rep").replaceWith("<b>Bu bir kalın yazıdır</b>");
+
+		// $("a.replace").each(function(){
+		// 	var yazi=$(this).text();
+		// 	$(this).replaceWith("<h1>"+yazi+"</h1>");
+		// });
+
+		$("input").focus(function(){
+			$(this).css("border-color","green").blur(function(){
+				$(this).css("border-color","red");
+			})
+		});
+
+
+	});
+
+
+	</script>
+
+</head>
+<body>
+
+	<a href="#">link</a>
+	<div>div</div>
+	<span>span</span>
+	
+	<img src="">
+	
+	<br><hr><br>
+
+	<a class="rep" href="#">Bu bir linktir</a>
+	
+	<a class="replace" href="#">Bu bir linktir1</a>
+	<a class="replace" href="#">Bu bir linktir2</a>
+	<a class="replace" href="#">Bu bir linktir3</a>
+	<a class="replace" href="#">Bu bir linktir4</a>
+
+	<br><hr><br>
+
+	<input type="text" name="">
+	
+	<br><hr><br>
+	<div id="alan"></div>
+</body>
+</html>

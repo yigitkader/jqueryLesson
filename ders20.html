@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+
+	<style type="text/css">
+	
+		#loader { background-color: #333; color:#fff; padding: 10px; position: absolute; bottom: 0; left: 0;}
+	
+	</style>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	 
+	 JQuery $.ajax metodu
+	
+	*/
+
+	$(function(){
+		
+		
+
+
+		$("button").click(function(){
+			
+			var ad=$("input[name=ad]").val();
+		 	var sifre=$("input[name=pas]").val();
+
+			$.ajax({
+				url:"ajax20.php",
+				type:"post",
+				data:{"kadi":ad,"sifre":sifre},
+				dataType:"json",
+				timeout:"2000",
+				success: function(cevap)
+				{
+					if (cevap.hata) 
+					{
+						alert(cevap.hata);
+					}
+					else
+					{
+						$("body").html(cevap.succes);
+					}
+				},error: function(a,b)
+				{
+					if (b=="timeout") 
+					{
+						alert("İstek zaman aşımına ugramıstır");
+					}
+				},statusCode: {
+					404:function(){
+						alert("Dosya bulunamadı");
+					}
+				}
+
+			});
+		});
+
+		$("#loader").ajaxStart(function(){
+			$(this).fadeIn();
+		}).ajaxStop(function(){
+			$(this).fadeOut();
+		});
+		
+
+
+
+	});
+
+
+	</script>
+
+
+
+</head>
+<body>
+
+	<span>Kullanici Ad</span><input type="text" name="ad">
+	<span>Sifre</span>	<input type="password" name="pas">
+	<button>Giris</button>
+	<div id="sonuc"></div>
+	
+	<div id="loader">Yükleniyor..</div>
+
+
+</body>
+</html>

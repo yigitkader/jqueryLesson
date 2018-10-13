@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<style type="text/css">
+		body{
+			height: 1500px;
+		}
+		div.anamenu a{
+			text-decoration:none;
+			color: #fff;
+			font-size: 25px;
+			padding-right: 15px;
+			
+		}
+		div.anamenu{
+			background-color: #aaa;
+			padding: 10px;
+		}
+		div.sol {
+			width: 120px;
+			height: 300px;
+			margin-top: 20px;
+			float: left;
+			background-color: grey;
+			padding-left: 5px;
+		}
+		div.sag{
+
+			background-color: #222;
+			color: #fff;
+			width: 900px;
+			height: 70px;
+			padding-left: 8px;
+			margin-left: 200px;
+			margin-top: 10px;
+			
+		}
+
+		div.footer{
+			background-color: red;
+			bottom: 0;
+			position:inherit;
+			float: none;
+			position: fixed;
+			width:100%;
+			margin-bottom: 0;
+		}
+
+		button{
+			float: right;
+			
+		}
+
+	</style>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	1)JQuery scroll metodu
+	2)JQuery scroll top metodu
+	
+		-> Scroll metodları sectigimiz nesnenin hareket etmesi isini yapar.  
+	*/
+	
+	$(function(){
+
+		$(window).scroll(function(){
+			var height1=$(this).scrollTop();
+			if (height1>60) 
+			{
+				$("div.sol").css("margin-top",(height1-20)+"px")
+			}
+			else
+			{
+				$("div.sol").css("margin-top",40+"px");
+			}
+
+			if (height1>150) 
+			{
+				$("div.anamenu").css({
+					"position":"fixed",
+
+					"width":"100%",
+					"top":"0",
+					"left":"0",
+					"box-sizing":"border-box"
+				});
+			}
+			else
+			{
+				$("div.anamenu").css({
+					"position":"inherit"
+				})
+			}
+
+		});
+		 	
+
+		var height2=0;
+		var screenHeight=screen.height
+
+		$("#btn").click(function(){
+			if (height2>screenHeight) 
+			{
+				height2=screenHeight;
+			}
+			else
+			{
+				height2=height2+10;
+				$(window).scrollTop(height2);
+
+			}
+
+			
+		});
+
+		$("#btn2").click(function(){
+
+			if (height2<0) 
+			{
+				height2=0;
+			}
+			else
+			{	
+				height2=height2-10;
+				$(window).scrollTop(height2);
+
+			}
+			
+
+		});
+			
+				
+	});
+
+
+	</script>
+	
+
+</head>
+<body>
+	<div class="center">
+		<div class="anamenu">
+			<a href="#">Anasayfa</a>
+			<a href="#">Hakkımızda</a>
+			<a href="#">Iletisim</a>
+		</div>
+		
+
+		<div class="sol">
+			Burası menudur.
+		</div>
+		<div class="sag">
+			Icerik..
+		</div>
+		
+	</div>
+	
+	<br>
+	<button id="btn">Asagı in</button>
+	<button id="btn2">Yukarı cık</button>
+	
+	<div class="footer">
+		<p>burası footer</p>
+	</div>
+</body>
+</html>

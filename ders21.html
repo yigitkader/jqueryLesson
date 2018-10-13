@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	1)JQuery Stop Metodu
+		-Calisan bir animasyonu durdurmamizi sağlar.
+	
+	2)JQuery :contains filtresi 
+		-Secilen nesnenin içerisinde contains icine girdiğimiz değerin,kelimenin olup olmadıgını kontrol eder.
+
+	3JQuery $.isNumeric Fonksiyonu   
+
+	*/
+
+
+	$(function(){
+
+		$(".ac").click(function()
+		{
+			$(".kutu").stop().slideToggle();
+		});
+
+		//$("ul.filtre li:contains('yigit')").css("color","red");
+		$.expr[':'].icontains=function(obj,index,meta,stack)
+		{
+			return (obj.textContent || obj.innerText || jQuery(obj).text() || '').toLowerCase().indexOf(meta[3].toLowerCase())>=0;
+		};
+
+		$("ul.filtre li:icontains('yigit')").css("color","red");
+
+
+		$("button").click(function(){
+			var deger=$("input[name=num]").val();
+			if ($.isNumeric(deger)) 
+			{
+				alert("Girdiğiniz değer numeriktir");
+			}
+			else
+			{
+				alert("Girilen değer numerik değildir");
+			}
+		});
+
+		
+	});
+
+
+	</script>
+
+	<style type="text/css">
+		
+		.ac{ border: 1px solid #ddd; padding: 5px; }
+		.kutu{ background-color: #ddd; margin-top: 10px; padding: 10px; display: none;}
+	</style>
+
+</head>
+<body>
+	<div class="ac">Kutuyu ac</div>
+	<div class="kutu">Bu div gizlenip gosterilecek</div>
+
+	
+		
+		<br><hr><br>
+
+	<ul class="filtre"> 
+		<li>Benim adım yigit kader</li>
+		<li>Benim adım yigit Kader</li>
+		<li>ben YIGIT</li>
+		<li>ben ali</li>
+
+	</ul>
+	
+	<br><hr><br>
+
+	<form>
+		<input type="text" name="num">
+		<button>Tıkla</button>
+	</form>
+	
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	
+	1)  JQuery remove metodu
+	
+	2)	Jquery toggle metodu
+	
+	3)	Jquery slide metotları
+		-slideUp -->> Yukarı kaydırarak gizler
+		-slideDown --> Gizlenmiş biseyi asagı kaydırarak gösterir
+		-slide toogle  --> Toggle metodunun aynısı fakat asagı yukarı 
+	*/
+
+	$(function(){
+
+		// $(".p1").click(function(){
+
+		// 	$(this).remove();
+		// });
+
+		// $(".p2").click(function(){
+
+		// 	$(this).hide;
+		// });		
+
+		$(".toggle").click(function(){
+
+			$(".yigit").toggle(2000);
+
+		});
+
+		$("button#kader").click(function(){
+
+			$("div.kader").slideDown(2000);
+
+		});
+
+		$("button#kader").click(function(){
+
+			$("div.kader").slideUp(2000);
+
+		});
+
+		
+		
+
+
+	});
+
+	</script>
+	<style type="text/css">
+		div.kader{ padding: 20px; border:5px solid #aaa; margin-bottom: 10px; }
+		div.yigit{ padding: 20px; border:5px solid #aaa; margin-bottom: 10px; }
+
+
+	</style>
+
+</head>
+<body>
+
+	<div class="kader"> Bu gizlenecek divdir</div>
+	<button id="kader">Gizle</button> <br><br>
+
+
+<div class="yigit" style="display: none">Toggle div</div>
+<button class="toggle">Goster/Gizle</button>
+
+<hr><hr>
+
+
+</body>
+</html>

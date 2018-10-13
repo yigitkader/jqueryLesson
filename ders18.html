@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+	* {
+		margin: 0; 
+		padding: 0;
+		border: 0;
+		font: 12px Arial;
+	}
+
+	a {text-decoration: none;}
+	ul {list-style: none;}
+
+	/* Slider Uygulaması */
+
+	#slider {margin: 20px; width: 500px;}
+	.slider{ width: 500px; height: 200px; overflow: hidden; }  /* overflow: hiddern; tasanları göstermez */
+	.slider ul {overflow: hidden;}
+	.slider ul li{ width: 500px; height: 200px; float: left; }   /* Resimleri yanyana gelmeleri icin left yapıyoruz*/
+	.sliderButton {text-align:  right; padding-top: 10px;}
+	.sliderButton a {background-color: #333; color: #fff; padding: 5px;}
+
+	</style>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	
+	<script type="text/javascript">
+	/* Bu dersin konuları
+		--> Jquery ile Slider Uygulaması Yapımı
+		
+			
+
+	*/
+	$(function(){
+
+		var toplamLi=$(".slider ul li").length;
+		var liWidth=500;
+		var toplamWidth=toplamLi*liWidth;
+		var liDeger=0;
+		$(".slider ul").css("width",toplamWidth+"px");
+
+		$("a.sonraki").click(function(){
+			if (liDeger<toplamLi-1) 
+			{
+				liDeger++;
+				var yeniWidth=liWidth*liDeger; //Sol tarafa ne kadar cekeceğimi ayarlıyorum.
+				$(".slider ul").animate({"margin-left":"-"+yeniWidth+"px"},500);
+			}
+			else
+			{
+				liDeger=0;
+				$(".slider ul").animate({"margin-left":0},500);
+			}
+
+			return false;
+		});
+
+		$("a.onceki").click(function(){
+
+			if (liDeger>0) 
+			{
+				liDeger--;
+				var yeniWidth=liWidth*liDeger;
+				$(".slider ul").animate({"margin-left":"-"+yeniWidth+"px"},500);
+			}
+			return false;
+		})
+
+
+		//Otomatik Donme Ozelligi
+
+		 var sure=500;
+		 $.Slider=function(){
+		 	if (liDeger<toplamLi-1) 
+		 	{
+		 		liDeger++;
+		 		yeniWidth=liDeger*liWidth;
+		 		$(".slider ul").animate({"margin-left":"-"+yeniWidth+"px"},500);
+
+		 	}
+		 	else
+		 	{
+		 		liDeger=0;
+		 		$(".slider ul").animate({"margin-left":0},1000);
+		 	}
+		 }
+
+		 var donence=setInterval("$.Slider()",sure);  // her yarım saniyede bunu calistir.
+
+		$("#slider").hover(function(){
+
+			clearInterval(donence);
+		
+		},function(){
+			donence=setInterval("$.Slider()",sure);  // her yarım saniyede bunu calistir.
+		
+		});
+
+		
+
+	});
+
+
+	</script>
+
+</head>
+<body>
+
+	 <div id="slider">
+	 	<div class="slider">
+	 		<ul>
+	 			<li><a href=""><img src="img/resim1.jpg" alt="resim"></a></li>
+	 			<li><a href="#"><img src="img/resim2.jpg" alt="resim"></a></li>
+	 			<li><a href="#"><img src="img/resim3.jpg" alt="resim"></a></li>
+	 			<li><a href="#"><img src="img/resim4.jpg" alt="resim"></a></li>
+	 			<li><a href="#"><img src="img/resim5.jpg" alt="resim"></a></li>
+	 		</ul>
+	 	</div>
+	 	<!-- Slider icin buton olusturcaz, ileri geri gitmesi icin. -->
+	 	<div class="sliderButton">
+	 		<a href="#" class="onceki">Onceki</a> 
+	 		<a href="#" class="sonraki">Sonraki</a>
+	 	</div>
+	 </div>
+
+
+	
+
+</body>
+</html>

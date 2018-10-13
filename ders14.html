@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	1)JQuery :odd(tek) ve :even(çift) secicileri
+	
+	2):gt ve :lt secicileri
+		-> gt    -> gt secicisi icine girilen değerden büyük olan değerleri secer.
+		<- lt    -> lt secicisi icine girilen değerden kücük olan değerleri secer.
+
+		*/
+
+
+		$(function(){
+
+			$("ul li.list:odd").css("color","red");
+			$("ul li.list:even").css("color","blue");
+
+			$("ul li.list2:lt(2)").css("color","orange");
+			$("ul li.list2:gt(2)").css("color","green");
+
+
+		});
+
+
+	</script>
+
+</head>
+<body>
+
+	<ul>
+		<li class="list">0. Liste</li>
+		<li class="list">1. Liste</li>
+		<li class="list">2. Liste</li>
+		<li class="list">3. Liste</li>
+		<li class="list">4. Liste</li>
+	</ul>
+	
+	<br><hr><br>
+	<ul>
+		<li class="list2">0. Liste</li>
+		<li class="list2">1. Liste</li>
+		<li class="list2">2. Liste</li>
+		<li class="list2">3. Liste</li>
+		<li class="list2">4. Liste</li>
+	</ul>
+
+
+</body>
+</html>

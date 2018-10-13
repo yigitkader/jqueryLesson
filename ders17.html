@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	1)JQuery Error Metodu
+		-Eğer nesne hata verirse bu metot çalısır.
+	
+	2)JQuery One Metodu
+		-Olayları sadece bikez yapmamızı sağlar
+	
+	3)JQuery Submit metodu 
+		-Bu metod form alanımızda submit olmadıgı zaman submit icin işimizi kolaylaştırır.
+	*/
+	
+	$(function()
+	{
+
+		// $("img").on("error",function(){
+
+		// 	$(this).attr("src","https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-627791.jpg");
+		// });
+
+		// $("button").click(function(){
+		// 	$("span").toggle();
+		// });
+
+
+
+		$("#deneme").click(function(){
+
+			$("form").submit(function(){
+				var deger=$("input[name=deneme]").val();
+				if (deger=="") 
+				{
+					alert("Deger boş");
+					return false;
+				}
+				return true;
+			}).submit();
+		});
+
+
+
+
+
+
+	});
+
+
+	</script>
+
+</head>
+<body>
+	
+	
+	<br><br>
+
+	<button>Goster/Gizle</button>
+	<span>Deneme</span>
+	
+	<br><br>
+	
+
+	<div class="resimler">
+		<img src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-613438.jpg" alt="" width="200" height="200">
+		
+	</div>
+
+
+	<br><hr><br>
+	<form method="post">
+		<input type="text" name="deneme">
+		
+	</form>
+	<br>
+	<div id="deneme">Formu post et - Tıkla </div>
+	
+
+</body>
+</html>

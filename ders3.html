@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ders1</title>  
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	
+	/*		
+			Bu dersin konuları:
+			
+			1)JQuery Fonksiyon Sınıfı Olusturma ve Kullanma
+			2)JQuery Tıklama  metodu 
+			3)JQuery Bosluk kaldırma(trim) metodu 
+			4) Val() metodu
+		*/	
+
+	$(function()
+	{
+
+		// $.Ali=
+		// {
+		// 	gonder: function(param1,param2)
+		// 	{
+		// 		alert(param1+","+param2);
+		// 	},
+		// 	onayla: function()
+		// 	{
+		// 		alert("Onaylandi");
+		// 	}
+
+		// };
+			
+		// $("#tikla").click(function(){
+		// 	$("div").css("background-color","blue");
+
+		// })
+
+
+		$("#trim").click(function(){
+			$("input[name=asd]").val('');
+
+		});
+
+		
+		
+	});
+
+</script>
+
+
+
+
+</head>
+<body>
+
+
+
+<button onclick="$.al('yigit')" >Gonder</button>
+<button onclick="$.Ali.onayla()">Onayla</button>
+
+<br><br><hr>
+
+<div>Ali</div>
+
+<button id="tikla">Tikla</button><br><br><hr>
+
+
+
+<input type="text" name="asd">
+<button id="trim">Trim</button>	
+
+
+
+
+</body>
+</html>

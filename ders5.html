@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	
+	1) JQuery :last ,  :first filtresi
+	2) Jquery $.getJSON fonksiyonu	
+	3) Jquery each(döngü) Metodu*/
+	
+	$(function(){
+
+		// var deger=5;
+
+		// $("ul.x li:eq("+deger+")").css("color","blue");
+
+		// $("button").click(function(){
+
+		// 	$.getJSON("veri.json",function(veri)
+		// 	{
+		// 		$("div#sonuc").html('<b>'+veri.name+' '+veri.yas+'</b>');
+		// 	});
+
+		// })
+
+		$("ul.x li").each(function(index)
+		{
+			var deger=$(this).text();
+			$(this).text(deger-5);
+		});
+
+		
+
+
+    });
+
+
+	</script>
+
+</head>
+<body>
+	
+	<ul class="x">
+		<li>5</li>
+		<li>10</li>
+		<li>20</li>
+		
+	</ul>
+
+	<button> JSON buton</button>
+
+	<br><hr>
+	<div id="sonuc"> </div>
+
+</body>
+</html>

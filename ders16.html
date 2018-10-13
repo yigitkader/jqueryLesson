@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+
+	1)JQuery :checked filtresi
+		-Bir işlemde checkbox'ı onayladımı ? , onaylandıgını anlama işlemleri yapma işini yapar .
+	
+	2)JQuery width-height metodu
+
+	3)JQuery Load metodu  
+		-Secilen nesne sayfada yüklendiğinde bunu yakalayan ve calısan metotdur.
+		-Mesela resim yüklemeleri. Resim yüklenene kadar kullanıcıya bilgi verme olayında kullanabiliriz.
+
+	*/
+
+	$(function(){
+
+		$("button").click(function(){
+
+			var val=$("input[name=kabul]:checked").val();
+			if (val) 
+			{
+				alert("secildi");
+			}
+			else
+			{
+				alert("secilmedi");
+			}
+
+		});
+
+		// $("#kader").height(500);
+		// $("#kader").width(500);
+
+		// var yuksek=$("#kader").height();
+		
+		// if (yuksek>299) 
+		// {
+		// 	alert("dosyanın boyutu cok büyük");
+		// }
+		// else
+		// {
+		// 	alert("dosyanız yüklenebilir");
+		// }
+
+		if ($("img").load) 
+		{
+			$("p").hide();
+		}
+		
+
+
+
+	});
+
+
+	</script>
+
+	<style type="text/css">
+		
+		div#kader{width: 300px; height: 298px; background-color: red;}
+
+	</style>
+
+</head>
+<body>
+	<div>Burada kurallarımız yer alıcak</div>
+	<input type="checkbox" id="kabul" name="kabul" >
+	<label for="kabul">Kuralları kabul ettiğimi düşünüyorum</label> <!-- İlişkilendirmek icin checkbox'ın id'sine for veriyoruz labela -->
+	<button>İşlemi bitir</button>
+
+	<br><hr><br>
+	
+	<div id="kader">Bu bir divdir</div>
+
+	<br><hr><br>
+
+	<p>Resim yükleniyor..</p>
+	<img src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-626895.jpg" width="300" height="300">
+
+	
+	
+
+</body>
+</html>

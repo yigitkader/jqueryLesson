@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+
+	1) JQuery :eq filtresi ve eq metodu  -> Girdiğimiz indis değerine ait nesneyi secmemizi sağlar. Metot olarak ta kullanabiliriz.
+
+	2)Jquery animate metodu
+
+	3)Jquery parent metodu */
+
+	$(function(){
+
+		$("button").click(function(){
+
+			$(this).parent().hide();
+		})
+
+	});
+
+
+</script>
+
+<style type="text/css">
+
+div.kader{padding: 20px; border: 5px solid  #aaa; margin-bottom: 10px; cursor: pointer;}
+</style>
+</head>
+<body>
+	
+	<div class="kader "> Hareketli alan</div><br>
+	
+
+	<br><hr><br>
+
+
+	<ul>
+		<li>Bu bir deneme  <button>tikla</button></li>
+		<li>Bu bir deneme yaz<button>tikla</button></li>
+		<li>Bu bir deneme yazdır <button>tikla</button></li>
+		<li>Bu bir der <button>tikla</button></li>
+		<li>Bu bir deneme yır <button>tikla</button></li>
+		<li>Bu bir deneme ydır <button>tikla</button></li>
+		<li>Bu bir deneme ydır <button>tikla</button></li>
+	</ul>
+
+
+	
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+Jquery-ders1
+	1)JQuery ile nesneleri secmek
+	2)Metodları kullanmak 
+	3)Gizleme hide efekti */
+
+
+jquery-ders2
+	1)JQuery CSS Metodu
+	2)JQuery Nitelik atama metodu -> attr()
+	3)JQuery Nitelik silici metodu -> removeattr()
+
+
+jquery-ders3
+	1)JQuery Fonksiyon Sınıfı Olusturma ve Kullanma
+	2)JQuery Tıklama  metodu -> attr()
+	3)JQuery Bosluk kaldırma(trim) metodu -> removeattr()
+
+
+jquery-ders4
+	1) JQuery Live (ON) Metodu --> Yeni kullanımı On
+	2)Jquery Append Metodu
+	3)Jquery Index Metodu*/
+
+jquery-ders5
+
+	1) JQuery :last filtresi
+	2) Jquery $.getJson fonksiyonu	
+	3) Jquery each(döngü) Metodu*/
+
+
+jquery-ders6
+	1)  JQuery remove metodu
+	2)	Jquery toggl metodu
+	3)	Jquery slide metotları*/
+
+jquery-ders7
+	
+	1)JQuery hover metodu
+	2)Jquery size metodu 
+	3)Jquery fade metotları (fadeOut(),fadeIn(),fadeTo(),fadeToggle()) */
+
+
+jquery-ders8
+	
+	1) JQuery :eq filtresi ve eq metodu
+	2)Jquery animate metodu
+	3)Jquery parent metodu */
+
+jquery-ders9
+	
+	-- TAB UYGULAMASI --
+
+
+jquery-ders10
+	1) JQuery Html()-Text()-Val()  Metodları 
+	2) Jquery toggleClass() Metodları
+	3) Jquery Prepend Metodu */
+	
+
+jquery-ders11
+	
+	
+	1) JQuery serialize metodu
+	2) JQuery hasClass metodu
+	3) JQuery Change metodu */
+
+
+
+jquery-ders12
+	
+	1)JQuery focus metodu
+	2)Jquery clone metodu
+	3)Jquery wrap metodu */
+
+jquery-ders13
+
+	1)JQuery Next Metodu  -->> Secilen nesneden sonraki gelen nesneyi secmemizi sağlar
+	2)JQuery focusOut Metodu
+	3)JQuery dblClick Metodu */
+
+jquery-ders14
+	
+	1)JQuery :odd(tek) ve :even(çift) secicileri
+	2):gt ve :lt secicileri
+		-> gt
+		<- lt
+
+
+jquery-ders15
+	Sayfalama Yapısı Oluşturma
+	
+
+jquery-ders16
+
+	1)JQuery :checked filtresi
+	2)JQuery width-height metodu
+	3)JQuery Load metodu  
+
+jquery-ders17
+	
+	1)JQuery Error Metodu
+	2)JQuery One Metodu
+	3)JQuery Submit metodu */
+
+jquery-ders18
+	--> Jquery ile Slider Uygulaması Yapımı
+
+jquery-ders19
+	
+	1)JQuery $.post kullanımı
+	2)JQuery $.get kullanımı
+	3)JQuery Succes , Error , Complete Metotları   
+
+
+jquery-ders20
+	
+	1)JQuery $.ajax metodu
+	2)JQuery ajaxStart, ajaxStop, ajaxComplete, ajaxSucces, ajaxSetup Metodları
+	3)JQuery Ajax üye ekleme Uygulaması */
+	
+
+
+
+	
+
+
+jquery-ders21
+	
+	1)JQuery Stop Metodu
+	2)JQuery :contains filtresi 
+	3JQuery $.isNumeric Fonksiyonu 
+
+jquery-ders22
+
+	1)JQuery $.browser nesnesi  
+
+	-> Tarayıcı tipi ve tarayıcı versiyonu veren nesnedir.
+		-opera
+		-safari
+		-mozilla
+		-webkit(chrome)
+
+	2)Jquery $.contains Fonksiyonu  /  $.contains(anaNesne,altNesne) 
+
+	3)Jquery resize metodu
+
+
+jquery-ders23
+
+	1)JQuery scroll metodu
+	2)JQuery scroll top metodu
+
+jquery-ders24
+
+	1)JQuery  has() metodu -> Has'in icine girdiğimiz nesnenin olup olmadıgını kontrol eder.
+	2)JQuery children() metodu -> Secilen nesne icinde kac tane cocuk nesne var onu bulmamızı sağlar.
+	3)JQuery prev() metodu   -> Secilen nesneden bir önceki nesneyi secmemizi sağlar.
+
+
+jquery-ders25
+
+	
+	1)JQuery is() metodu  ->> Buna biz kontrol metodu diyebiliriz. icine yazdıgımız metodun olup olmadıgına bakar.
+		-return true/false
+	
+	2)Jquery replaceWith() metodu --> Nesnelerin etiketlerini değiştirmek icin kullanabiliriz.
+	3)Jquery blur() metodu --> Nesneden odaklanma cekildiğinde calısır.
+
+
+
+
+jquery-ders26
+
+	1)- jQuery finish Metodu
+	2)- jQuery on - off Metodları
+	3)- jQuery :first-of-type Seçicisi
+
+
+
+
+
+
+
+
+
+

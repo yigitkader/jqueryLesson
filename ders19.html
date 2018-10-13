@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	1)JQuery $.post kullanımı
+	
+	2)JQuery $.get kullanımı
+	
+	3)JQuery Succes , Error , Complete Metotları   
+	*/
+	
+
+
+	$(function()
+	{
+
+		//Veri gondermeden post
+
+		$("#buton1").click(function(){
+			$.post("ajax.php",function(veri){
+
+				$("#sonuc").html(veri);
+			});
+		});
+
+		//İnputtan veri alarak post etme
+
+		$("#buton2").click(function(){
+			var deger=$("input[name=deneme]").val();
+			$.post("ajax.php",{"q":deger,"deneme":"deneme"},function(veri){
+
+				$("#sonuc2").html(veri);
+				$("input[name=deneme]").val('').focus();
+			});
+		});	
+
+		//Verilerimizi dizi olarak gonderme
+
+		$("#buton3").click(function(){
+			// var deger=$("input[name=deneme]").val();
+			
+			$.post("ajax.php",{"id":['1','2','3','4','5']},function(veri){
+				$("#sonuc3").html(veri);
+			});
+		});
+
+		//Json ile gonderme
+
+		$("#buton4").click(function(){
+
+			$.post("ajax.php",function(veri){
+
+				// if (veri.yigit) 
+				// {
+				// 	alert(veri.yigit)
+				// }
+			$("#sonuc4").html(veri.yigit);
+			},"json").done(function(){
+				alert("Ajax isteği basarılı bir sekilde gerceklesti");
+			}).fail(function(){
+				alert("Ajax istegi basarız olmustur.");
+			}).always(function(){
+				alert("Ajax istegi gerceklesti");
+			});
+		});
+
+
+		$("#buton5").click(function(){
+			var deger2=$("input[name=deneme2]").val();
+			
+			$.get("ajax.php",{"x":deger2},function(veri){
+				
+				$("#sonuc5").html(veri);
+			})
+		});
+
+				
+
+	});
+
+
+	</script>
+
+</head>
+<body>
+
+	<button id="buton1">Ajax isteğini baslat</button><br>
+
+	<div id="sonuc"></div>
+	<br><hr><br>
+	<input type="text="" name="deneme">
+	<button id="buton2">2. Ajax isteğini baslat</button><br>
+	<div id="sonuc2"></div>
+	<br><hr><br>
+
+	<button id="buton3">Dizi halinde gonder</button>
+	<br>
+	<div id="sonuc3"></div>
+	
+	<br><hr><br>
+	<button id="buton4">Json İle</button><br><br>
+	<div id="sonuc4"></div> <br><hr><br>
+
+	<input type="text" name="deneme2">
+	<button id="buton5">$.Get ile Al</button>
+	<div id="sonuc5"></div>
+
+
+	<!-- Submit butonu olmadan enterla calıstırmak icin text alanını , form icine alırız form niteliğine < onSubmit="return false" > yazabiliriz. -->
+
+
+
+
+</body>
+</html>

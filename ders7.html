@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+
+	1)JQuery hover metodu
+	
+	2)Jquery Length metodu -> Bir nesnenin sayfada kac tane oldugunu gösterir
+
+	3)Jquery fade metotları (fadeOut(),fadeIn(),fadeTo(),fadeToggle()) 
+		  -Fadeout karartarak gizleme işi yapar.
+		  -FadeIn karartarak gösterme yapar.
+		  -FadeToggle toggle mantıgında yani acıksa kapat, kapalı ise ac yapar.
+		  -FadeTo Opacity düşürür . Buradaki 0.5 -> %50 demek.
+
+
+		  */
+
+
+		  $(function(){
+
+		  	$("button#tid").click(function(){
+		  		$("div.tid4").fadeTo('slow',0.5);
+
+		  	});
+
+
+		  
+
+
+
+		  });
+
+
+		</script>
+		<style type="text/css">
+		div.kader{ padding: 20px; border:5px solid #aaa; margin-bottom: 10px; }
+		
+
+	</style>
+
+</head>
+<body>
+	<div class="kader"> Buranın üzerine gel</div>
+	<div class="yigit">Burası kaybolsun</div>
+	<br><hr><br>
+
+	<ul>
+		<li><a href="#">yigit kader</a></li>
+		<li><a href="#">yigit kader</a></li>
+		<li><a href="#">yigit kader</a></li>
+		<li><a href="#">yigit kader</a></li>
+		<li><a href="#">yigit kader</a></li>
+		<li><a href="#">yigit kader</a></li>
+	</ul>
+
+<br><hr><br>
+
+	<div id="tid" class="tid">Buraya biseyler olcak</div> <!-- Fadeout icin -->
+	<button id="tid">Tıklaaa</button>
+	<hr>
+	<br><br>
+	<div id="tid2" class="tid2" style="display: none;">Buraya biseyler olcak 2</div> <!-- FadeIn icin --><br>
+	<button id="tid2">Tıklaaa</button>
+	<br><br>
+	<hr>
+
+	<div id="tid" class="tid3">Toggleeee</div> <!-- FadeToggle icin --><br>
+	<button id="tid3">Tıklaaa</button>
+
+	<hr>
+
+	<div id="tid" class="tid4">Fade to</div> <!-- FadeToggle icin --><br>
+	<button id="tid4">Opacity düsür</button>
+
+</body>
+</html>

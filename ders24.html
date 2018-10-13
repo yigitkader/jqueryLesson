@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	
+	/* Bu dersin konuları
+
+	1)JQuery  has() metodu -> Has'in icine girdiğimiz nesnenin olup olmadıgını kontrol eder.
+	
+	2)JQuery children() metodu -> Secilen nesne icinde kac tane cocuk nesne var onu bulmamızı sağlar.
+	
+	3)JQuery prev() metodu   -> Secilen nesneden bir önceki nesneyi secmemizi sağlar.
+
+	*/
+	
+
+	$(function(){
+
+
+		// var deger=$("#deneme").has("a").length;
+		// alert(deger);
+
+		// alert($("#deneme2").children().length);
+
+		$("#sonuc2").prev().css("background-color","red");
+	
+	});
+
+
+	</script>
+
+</head>
+<body>
+
+	<div id="deneme">
+		Bu bir denemedir <strong>burası</strong> kalındır 
+	</div><br>
+	<div id="sonuc"> 
+
+	</div>
+	
+	<br><hr><br>
+
+	<div id="deneme2"><em>Burası</em> <br> egiktir</div>
+	<div id="sonuc2">dfsdfdsfsfsd</div> 
+	<!-- <br><hr><br> -->	
+
+	<a href="#">Link</a>
+
+
+
+</body>
+</html>

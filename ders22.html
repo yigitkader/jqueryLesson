@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+
+	1)JQuery $.browser nesnesi  
+
+	-> Tarayıcı tipi ve tarayıcı versiyonu veren nesnedir.
+		-opera
+		-safari
+		-mozilla
+		-webkit(chrome)
+
+	2)Jquery $.contains Fonksiyonu  /  $.contains(anaNesne,altNesne) 
+		-Ana nesne icinde alt nesne olup olmadıgını bulmamızı sağlar
+
+	3)Jquery resize metodu
+		-Resize metodu genelde pencerenin yeniden boyutlandırılmasında kullanılır. */
+
+	 
+	
+
+	$(function(){
+		
+		// var browser='';
+
+		// if ($.browser.safari) 
+		// {
+		// 	browser="safari";
+		// }
+		// else if ($.browser.webkit) 
+		// {
+		// 	browser="chrome";
+		// }
+		// else if($.browser.mozilla)
+		// {
+		// 	browser="mozilla";
+		// }
+
+		// //alert("Tarayiciniz: "+browser);
+
+		// //$("#tarayici").html("Tarayici tipi:"+browser+"<br />"+"Tarayici versiyonu: "+$.browser.version);
+
+		// if (browser=='mozilla') 
+		// {
+		// 	$("body").html("Bu siteye bu tarayicidan giremezsiniz");
+		// }
+
+		// var deger=$.contains($("div#deneme"),$("strong"));
+		// if (deger) 
+		// {
+		// 	alert("Nesne bulunuyor");
+		// }
+
+
+		$(window).resize(function(){
+			var width=$(this).width();
+			var height=$(this).height();
+			$("#sonuc").html("<b>Width </b>"+width+"<br />"+"<b>Height: </b>"+height);
+		});
+
+
+
+
+
+	});
+
+
+	</script>
+
+</head>
+<body>
+	
+	<!-- Tarayici versiyonunu bulmak icin kullanıcaz-->
+	<div id="tarayici">Deneme</div>
+
+	<br><hr><br>
+	<div id="deneme">
+		<!-- Burada idsi deneme olan divin icinde strong varmı yokmu diye bakcaz (contains) -->
+		bu tarayıcı <strong>versiyonu</strong> nedir?
+	</div>
+	<br><hr><br>
+
+	<div id="sonuc">
+	
+	</div>
+
+</body>
+</html>

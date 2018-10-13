@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	1)JQuery focus metodu
+		-Text alanlarını direk odalar yani imleçi oradan baslatır
+	
+	2)Jquery clone metodu
+		-İstedigimiz nesnenin aynısından oluşturmamızı sağlar.
+	
+	3)Jquery wrap metodu 
+		-Secilen nesnenin hangi nesnenin icine gecirileciğini belirler.
+	*/
+
+	$(function(){	
+		
+		
+		// $("#btn").hover(function(){
+		// 	$("input[name=kelime]").focus();	
+		// });
+
+		// $(".yigit").click(function(){
+
+		// 	var clon=$(this).clone();
+		// 	$(this).after(clon);
+		// })
+
+		$("#wrap").click(function(){
+			$(".deneme").wrap('<div class="aaa"></div>');
+		});
+
+
+	});
+
+
+	</script>
+
+	<style type="text/css">
+		.aaa{border: 5px solid #aaa; padding: 5px;}
+	</style>
+
+</head>
+<body>
+	
+	<input type="text" name="kelime">
+	<button id="btn">buton</button>
+	
+
+<br><br>
+
+
+<div class="yigit" id="kader">Normal divimiz</div> <br><br>
+<hr><br>
+
+<div class="aaa"> Div alanlarından wrap icin</div><br>
+
+<div class="deneme">Bu bir deneme dividir</div>
+
+<button id="wrap">wrap</button>
+
+
+</body>
+</html>

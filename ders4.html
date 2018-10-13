@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	<style type="text/css">
+		
+		.sınıf{
+			background-color: blue;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+	/* Bu dersin konuları
+	
+	1) JQuery ON Metodu 
+	2)Jquery After ve append Metodu
+	3)AddClass ve RemoveClass metodları
+	4)Jquery Index Metodu -> eq("") // eq İndisi  secer */
+
+
+
+
+	$(function(){
+
+		// $("button").on({
+		// 	click:function(){
+		// 		$(this).append('<p>banada tikla</p>');
+		// 	},
+		// 	mouseover:function(){
+		// 		$("button").addClass("sınıf");
+		// 	},
+		// 	mouseout:function(){
+		// 		$("button").removeClass();
+		// 	}
+		// });
+
+		$("ul li").click(function(){
+
+			var deger=$(this).index();
+			alert(deger+1);
+
+			$(".tab:eq("+deger+")").css("color","red");
+
+		})
+
+
+	});
+
+
+
+	</script>
+
+
+
+</head>
+<body>
+
+
+	<button>Buraya tikla</button>
+	<br><hr><br>
+	
+	<p>Paragraf alanına tıkla</p>
+	
+	<br><hr><br>
+
+	<ul>
+		<li><a href="#">1.TAB</a></li>
+		<li><a href="#">2.TAB</a></li>
+		<li><a href="#">3.TAB</a></li>
+	</ul>
+
+<div class="tab">1.div</div>
+<div class="tab">2.div</div>
+<div class="tab">3.div</div>
+
+
+
+</body>
+</html>
